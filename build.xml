@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PROJECT>
+<project name="docstore-builder" default="makejar" basedir=".">
+  <target name="makejar" description="Create a jar from the project">
+  	<property name="version" value="0.2" />
+    <property name="bin" location="bin" />
+    <property name="lib" location="war/WEB-INF/lib/" />
+  	<property name="jar" value="jsondatastore-${version}.jar" />
+  	<property name="bundle" value="jsondatastore-${version}-bundle.zip" />
+    
+    <mkdir dir="${bin}" />
+
+    <!-- create jar jar and overwrite old one -->
+    <jar destfile="${bin}/${jar}" >
+      <fileset dir="war/WEB-INF/classes/" /> 
+      <fileset dir="src/" />
+    </jar>
+
+    <!-- create a zip file with all dependencies bundled -->
+    <zip destfile="${bin}/${bundle}">
+      <fileset dir="${bin}" includes="${jar}" /> 
+      <fileset dir="${lib}" 
+        includes="jackson-* twig-persist-* guava-* js.jar bsf-all-* " />     
+    </zip>
+
+  </target>
+</project>

@@ -1,0 +1,7 @@
+classes
+appengine-generated
+appengine-*
+datanucleus-*
+geronimo-*
+jdo2-*
+jsr107cache-*

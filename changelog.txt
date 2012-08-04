@@ -1,0 +1,9 @@
+JSONDATASTORE
+http://wjosdejong.github.com/jsondatastore/
+
+
+2012-08-04, version 0.1
+
+- initial import from the project Docstore 
+- project and classes srenamed from Docstore to JSONDatastore.
+- small bug-fixes
