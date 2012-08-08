@@ -9,7 +9,6 @@ import java.util.logging.Logger;
 
 import com.almende.jsondatastore.entity.Change;
 import com.almende.jsondatastore.entity.Document;
-import com.almende.jsondatastore.entity.View;
 import com.almende.jsondatastore.jackson.JOM;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
